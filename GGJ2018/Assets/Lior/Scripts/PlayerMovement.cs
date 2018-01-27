@@ -68,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
 			
 
 		RaycastHit2D baseHit = Physics2D.Raycast (transform.position, Vector2.down, 100f, layerMask);
-		Debug.Log (baseHit.collider.gameObject.tag);
+		//Debug.Log (baseHit.collider.gameObject.tag);
 
 		if (baseHit.collider.gameObject.tag == "Base Border") 
 		{
