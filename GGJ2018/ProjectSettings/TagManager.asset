@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Up Border
   - Base Border
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - 
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -45,4 +46,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3668996035
+    locked: 0
+  - name: Enemy
+    uniqueID: 3627150195
     locked: 0
