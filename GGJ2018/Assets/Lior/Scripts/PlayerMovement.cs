@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
+	//parameters
 	public float speed = 1f;
 	public float teleportDistance = 1f;
 	public float downJumpForce = 1f;
 	public LayerMask layerMask;
 
-	private float gravityForce;
+	//components
 	private Rigidbody2D rb;
+	private Animator anim;
+
+	//used for logic
 	private bool isUp = false;
 	private bool isBase = false;
 
 	// Use this for initialization
 	void Start () 
 	{
+		anim = GetComponentInChildren<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
-		gravityForce = rb.velocity.y;
 	}
 	
 	// Update is called once per frame
@@ -30,18 +34,34 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
-		Jump ();
+		Teleport ();
 	}
 
 	private void HandleMovement()
 	{
 		float inputH = Input.GetAxis ("Horizontal") * speed;
 		 
+		if (Input.GetAxis ("Horizontal") > 0) 
+		{
+			anim.SetBool ("isWalkingR", true);
+			anim.SetBool ("isWalkingL", false);
+		}
+
+		if (Input.GetAxis ("Horizontal") < 0) 
+		{
+			anim.SetBool ("isWalkingL", true);
+			anim.SetBool ("isWalkingR", false);
+		} 
+		if (Input.GetAxis ("Horizontal") == 0) 
+		{
+			anim.SetBool ("isWalkingR", false);
+			anim.SetBool ("isWalkingL", false);
+		}
 
 		rb.velocity = new Vector2(inputH, rb.velocity.y) * Time.deltaTime;
 	}
 
-	private void Jump()
+	private void Teleport()
 	{
 		if ((Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && isUp == false) 
 		{
