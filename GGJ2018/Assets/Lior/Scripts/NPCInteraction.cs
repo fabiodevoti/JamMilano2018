@@ -19,9 +19,7 @@ public class NPCInteraction : MonoBehaviour
 			{
 				if (timer >= reactionTime) 
 				{
-					Debug.Log (timer);
-					Debug.Log ("YOU LOST!!!!!");
-					player.SetActive (false);
+					player.GetComponent<PlayerMovement> ().isDead = true;
 				} 
 				else if (timer < reactionTime) 
 				{

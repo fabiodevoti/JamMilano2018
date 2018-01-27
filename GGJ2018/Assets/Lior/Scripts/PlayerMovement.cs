@@ -11,6 +11,10 @@ public class PlayerMovement : MonoBehaviour
 	public LayerMask layerMask;
 	public GameObject effettoTeleport;
 
+	//
+	[HideInInspector]
+	public bool isDead = false;
+
 	//components
 	private Rigidbody2D rb;
 	private Animator anim;
@@ -37,6 +41,11 @@ public class PlayerMovement : MonoBehaviour
 	void Update()
 	{
 		TeleportInput ();
+
+		if (isDead == true) 
+		{
+			anim.SetBool("isDead", true);
+		}
 	}
 
 	private void HandleMovement()
@@ -77,11 +86,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if ((Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && isUp == false) 
 		{
-			StartCoroutine(TeleportUp(0.50f));
+			StartCoroutine(TeleportUp(0.60f));
 		}
 		else if ((Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) && isBase == false) 
 		{
-			StartCoroutine(TeleportDown(0.50f));
+			StartCoroutine(TeleportDown(0.60f));
 		} 
 			
 	}
