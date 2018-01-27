@@ -1,24 +1,24 @@
 fileFormatVersion: 2
-guid: 9a88cbf1bd9a48a4b9a40f79ef5876d7
-timeCreated: 1517064441
+guid: 602533309f80f3b428fef61605fbc2f7
+timeCreated: 1517061064
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: hmn walks dee oder sei_0
-    21300002: hmn walks dee oder sei_1
-    21300004: hmn walks dee oder sei_2
-    21300006: hmn walks dee oder sei_3
-    21300008: hmn walks dee oder sei_4
-    21300010: hmn walks dee oder sei_5
-    21300012: hmn walks dee oder sei_6
-    21300014: hmn walks dee oder sei_7
-    21300016: hmn walks dee oder sei_8
-    21300018: hmn walks dee oder sei_9
-    21300020: hmn walks dee oder sei_10
-    21300022: hmn walks dee oder sei_11
-    21300024: hmn walks dee oder sei_12
-    21300026: hmn walks dee oder sei_13
-    21300028: hmn walks dee oder sei_14
+    21300000: walk centrata_0
+    21300002: walk centrata_1
+    21300004: walk centrata_2
+    21300006: walk centrata_3
+    21300008: walk centrata_4
+    21300010: walk centrata_5
+    21300012: walk centrata_6
+    21300014: walk centrata_7
+    21300016: walk centrata_8
+    21300018: walk centrata_9
+    21300020: walk centrata_10
+    21300022: walk centrata_11
+    21300024: walk centrata_12
+    21300026: walk centrata_13
+    21300028: walk centrata_14
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -95,7 +95,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hmn walks dee oder sei_0
+      name: walk centrata_0
       rect:
         serializedVersion: 2
         x: 0
@@ -109,7 +109,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_1
+      name: walk centrata_1
       rect:
         serializedVersion: 2
         x: 64
@@ -123,7 +123,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_2
+      name: walk centrata_2
       rect:
         serializedVersion: 2
         x: 128
@@ -137,7 +137,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_3
+      name: walk centrata_3
       rect:
         serializedVersion: 2
         x: 192
@@ -151,7 +151,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_4
+      name: walk centrata_4
       rect:
         serializedVersion: 2
         x: 256
@@ -165,7 +165,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_5
+      name: walk centrata_5
       rect:
         serializedVersion: 2
         x: 320
@@ -179,7 +179,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_6
+      name: walk centrata_6
       rect:
         serializedVersion: 2
         x: 384
@@ -193,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_7
+      name: walk centrata_7
       rect:
         serializedVersion: 2
         x: 448
@@ -207,7 +207,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_8
+      name: walk centrata_8
       rect:
         serializedVersion: 2
         x: 512
@@ -221,7 +221,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_9
+      name: walk centrata_9
       rect:
         serializedVersion: 2
         x: 576
@@ -235,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_10
+      name: walk centrata_10
       rect:
         serializedVersion: 2
         x: 640
@@ -249,7 +249,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_11
+      name: walk centrata_11
       rect:
         serializedVersion: 2
         x: 704
@@ -263,7 +263,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_12
+      name: walk centrata_12
       rect:
         serializedVersion: 2
         x: 768
@@ -277,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_13
+      name: walk centrata_13
       rect:
         serializedVersion: 2
         x: 832
@@ -291,7 +291,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hmn walks dee oder sei_14
+      name: walk centrata_14
       rect:
         serializedVersion: 2
         x: 896

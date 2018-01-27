@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: b44c5bc3abfefd2478fbdb929a8013d3
-timeCreated: 1517060424
+guid: e5b6bfbbe3f8e684e913b10c30c48c1f
+timeCreated: 1517063990
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: booping centrato_0
-    21300002: booping centrato_1
-    21300004: booping centrato_2
-    21300006: booping centrato_3
+    21300000: booping hkr altro lato_0
+    21300002: booping hkr altro lato_1
+    21300004: booping hkr altro lato_2
+    21300006: booping hkr altro lato_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -35,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: booping centrato_0
+      name: booping hkr altro lato_0
       rect:
         serializedVersion: 2
         x: 0
@@ -98,7 +98,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: booping centrato_1
+      name: booping hkr altro lato_1
       rect:
         serializedVersion: 2
         x: 64
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: booping centrato_2
+      name: booping hkr altro lato_2
       rect:
         serializedVersion: 2
         x: 128
@@ -126,7 +126,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: booping centrato_3
+      name: booping hkr altro lato_3
       rect:
         serializedVersion: 2
         x: 192
