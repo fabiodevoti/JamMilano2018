@@ -9,12 +9,20 @@ public class NPCInteraction : MonoBehaviour
 	public bool isCured = false;
 	public float reactionTime = 1f;
 	public float chargeUpTime = 1f;
-
 	public float chargeBar = 0f;
+
+	public AudioClip bar;
+	public AudioClip infected;
+	public AudioClip cured;
 
 	private bool playerCollision;    // Player in range to show audio & visual cue
 	private float timer;
+	private AudioSource audioSource;
 
+	void Start()
+	{
+		audioSource = GetComponent<AudioSource> ();
+	}
 
 	void Update()
 	{
@@ -24,7 +32,7 @@ public class NPCInteraction : MonoBehaviour
 			{
 				if (timer >= reactionTime)
 				{
-					player.GetComponent<PlayerMovement> ().isDead = true;
+					player.GetComponent<Player> ().isDead = true;
 				}
 				else if (timer < reactionTime)
 				{
@@ -36,11 +44,15 @@ public class NPCInteraction : MonoBehaviour
 				if (chargeBar >= chargeUpTime)
 				{
 					//TODO delete charge bar animation
+					audioSource.Stop();
 					isCured = true;
 					StartCoroutine(ChangeColour(0.5f));
 				}
 				else
 				{
+					//audioSource.clip = bar;
+					if(audioSource.isPlaying == false)
+						audioSource.PlayOneShot(bar);
 					chargeBar += Time.deltaTime;
 				}
 
@@ -50,6 +62,7 @@ public class NPCInteraction : MonoBehaviour
 		{
 			timer = 0f;
 			// TODO delete charge bar animation IF IT EXISTS!!!!
+
 			chargeBar = 0f;
 		}
 	}
@@ -79,17 +92,19 @@ public class NPCInteraction : MonoBehaviour
 	{
 		if (isInfected == true)
 		{
+			if(audioSource.isPlaying == false)
+			audioSource.PlayOneShot (infected);
+			
 			gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
 		}
 		else if (isInfected == false && isCured == true)
 		{
-			Debug.Log(isCured);
+			audioSource.PlayOneShot (cured);
 			gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
 		}
 
 		yield return (new WaitForSeconds(seconds));
-
-
+		
 		gameObject.GetComponent<SpriteRenderer>().color = Color.white;
 
 	}
