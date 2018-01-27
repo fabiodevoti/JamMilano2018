@@ -5,9 +5,10 @@ using UnityEngine;
 public class NPCInteraction : MonoBehaviour 
 {
 	public bool isInfected;
-	public bool playerCollision;
 	public float reactionTime = 1f;
 	public GameObject player;
+
+	private bool playerCollision;
 	private float timer;
 
 	void Update()
