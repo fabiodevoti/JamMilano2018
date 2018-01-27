@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 	public float teleportDistance = 1f;
 	public float downJumpForce = 1f;
 	public LayerMask layerMask;
+	public GameObject effettoTeleport;
 
 	//components
 	private Rigidbody2D rb;
@@ -34,43 +35,72 @@ public class PlayerMovement : MonoBehaviour
 
 	void Update()
 	{
-		Teleport ();
+		TeleportInput ();
 	}
 
 	private void HandleMovement()
 	{
+		//input horizontale
 		float inputH = Input.GetAxis ("Horizontal") * speed;
-		 
+
+		//gestione animazioni di destra 
 		if (Input.GetAxis ("Horizontal") > 0) 
 		{
 			anim.SetBool ("isWalkingR", true);
 			anim.SetBool ("isWalkingL", false);
 		}
 
+		//gestione animazioni di sinistra
 		if (Input.GetAxis ("Horizontal") < 0) 
 		{
 			anim.SetBool ("isWalkingL", true);
 			anim.SetBool ("isWalkingR", false);
-		} 
+		}
+
+		//gestione animazione di idle
 		if (Input.GetAxis ("Horizontal") == 0) 
 		{
 			anim.SetBool ("isWalkingR", false);
 			anim.SetBool ("isWalkingL", false);
 		}
 
+		//direzione di movimento
 		rb.velocity = new Vector2(inputH, rb.velocity.y) * Time.deltaTime;
 	}
 
-	private void Teleport()
+	private void TeleportInput()
 	{
 		if ((Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && isUp == false) 
 		{
-			transform.position = new Vector2(transform.position.x, transform.position.y + teleportDistance);
+			StartCoroutine(TeleportUp(0.50f));
 		}
 		else if ((Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) && isBase == false) 
 		{
-			transform.position = new Vector2(transform.position.x, transform.position.y - teleportDistance);
+			StartCoroutine(TeleportDown(0.50f));
 		} 
+			
+	}
+
+	public IEnumerator TeleportUp(float seconds)
+	{
+		anim.Play ("TeleportPlayer");
+		GameObject toDestroy = Instantiate (effettoTeleport, transform);
+
+		yield return (new WaitForSeconds (seconds));
+
+		Destroy (toDestroy);
+		transform.position = new Vector2(transform.position.x, transform.position.y + teleportDistance);
+	}
+
+	public IEnumerator TeleportDown(float seconds)
+	{
+		anim.Play ("TeleportPlayer");
+		GameObject toDestroy = Instantiate (effettoTeleport, transform);
+
+		yield return (new WaitForSeconds (seconds));
+
+		Destroy (toDestroy);
+		transform.position = new Vector2(transform.position.x, transform.position.y - teleportDistance);
 	}
 
 	private void CheckBorders()

@@ -15,9 +15,10 @@ public class NPCMovement : MonoBehaviour {
 
     private float waitTimer = 0f;
     private int selected = 0;
-
+	private Animator anim;
     void Start () 
 	{
+		anim = GetComponent<Animator> ();
     }
 	
 	void FixedUpdate () 
@@ -47,7 +48,22 @@ public class NPCMovement : MonoBehaviour {
 			} 
 			else 
 			{
-				transform.Translate(speed * Time.deltaTime * Mathf.Sign(targets[selected].position.x - transform.position.x), 0, 0);
+				float direzione = Mathf.Sign (targets [selected].position.x - transform.position.x);
+
+				//gestione animazioni di destra 
+				if (direzione > 0) 
+				{
+					anim.SetBool ("isWalkingR", true);
+					anim.SetBool ("isWalkingL", false);
+				}
+
+				//gestione animazioni di sinistra
+				if (direzione < 0) 
+				{
+					anim.SetBool ("isWalkingL", true);
+					anim.SetBool ("isWalkingR", false);
+				}
+				transform.Translate(speed * Time.deltaTime * direzione, 0, 0);
 			}
                 
 
@@ -56,6 +72,11 @@ public class NPCMovement : MonoBehaviour {
         else if (state == 2) // is waiting
         {
 			waitTimer -= Time.deltaTime;
+
+			//gestione animazione di idle
+			anim.SetBool ("isWalkingR", false);
+			anim.SetBool ("isWalkingL", false);
+
             if (waitTimer <= 0) state = 0;
         }
 

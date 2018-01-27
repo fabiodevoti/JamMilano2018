@@ -61,7 +61,7 @@ public class NPCInteraction : MonoBehaviour
 	{
 		if (isInfected == true) 
 		{
-			gameObject.GetComponent<SpriteRenderer> ().color = Color.red;
+			gameObject.GetComponent<SpriteRenderer> ().color = Color.yellow;
 		} 
 		else if (isInfected == false) 
 		{
@@ -69,6 +69,7 @@ public class NPCInteraction : MonoBehaviour
 		}
 
 		yield return (new WaitForSeconds(seconds));
+
 
 		gameObject.GetComponent<SpriteRenderer> ().color = Color.white;
 			
