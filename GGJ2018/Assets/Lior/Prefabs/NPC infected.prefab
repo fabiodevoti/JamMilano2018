@@ -98,8 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isInfected: 1
-  reactionTime: 1
   player: {fileID: 0}
+  isCured: 0
+  reactionTime: 1
+  chargeUpTime: 1
+  chargeBar: 0
 --- !u!114 &114205892177083422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c69a5511096fd24dae644e413d7697a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   waitTime: 2
   range: 0.5
   targets:
