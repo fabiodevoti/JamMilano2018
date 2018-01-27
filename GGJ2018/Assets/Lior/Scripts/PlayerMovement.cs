@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour 
 {
 	public float speed = 1f;
-	public float jumpForce = 1f;
+	public float teleportDistance = 1f;
 	public float downJumpForce = 1f;
 	public LayerMask layerMask;
 
@@ -45,11 +45,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if ((Input.GetKeyDown (KeyCode.W) || Input.GetKeyDown (KeyCode.UpArrow)) && isUp == false) 
 		{
-			transform.Translate (new Vector2(0, jumpForce * Time.deltaTime));
+			transform.position = new Vector2(transform.position.x, transform.position.y + teleportDistance);
 		}
 		else if ((Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) && isBase == false) 
 		{
-			transform.Translate (new Vector2(0, -jumpForce * Time.deltaTime));
+			transform.position = new Vector2(transform.position.x, transform.position.y - teleportDistance);
 		} 
 	}
 
