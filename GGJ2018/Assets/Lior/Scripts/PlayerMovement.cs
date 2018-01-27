@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 	//components
 	private Rigidbody2D rb;
 	private Animator anim;
+	private bool isWatchingR = false;
 
 	//used for logic
 	private bool isUp = false;
@@ -46,6 +47,8 @@ public class PlayerMovement : MonoBehaviour
 		//gestione animazioni di destra 
 		if (Input.GetAxis ("Horizontal") > 0) 
 		{
+			isWatchingR = true;
+
 			anim.SetBool ("isWalkingR", true);
 			anim.SetBool ("isWalkingL", false);
 		}
@@ -53,6 +56,8 @@ public class PlayerMovement : MonoBehaviour
 		//gestione animazioni di sinistra
 		if (Input.GetAxis ("Horizontal") < 0) 
 		{
+			isWatchingR = false;
+
 			anim.SetBool ("isWalkingL", true);
 			anim.SetBool ("isWalkingR", false);
 		}
@@ -83,7 +88,15 @@ public class PlayerMovement : MonoBehaviour
 
 	public IEnumerator TeleportUp(float seconds)
 	{
-		anim.Play ("TeleportPlayer");
+		if (isWatchingR == true) 
+		{
+			anim.Play ("TeleportPlayerR");
+		} 
+		else 
+		{
+			anim.Play ("TeleportPlayerL");
+		}
+
 		GameObject toDestroy = Instantiate (effettoTeleport, transform);
 
 		yield return (new WaitForSeconds (seconds));
@@ -94,7 +107,15 @@ public class PlayerMovement : MonoBehaviour
 
 	public IEnumerator TeleportDown(float seconds)
 	{
-		anim.Play ("TeleportPlayer");
+		if (isWatchingR == true) 
+		{
+			anim.Play ("TeleportPlayerR");
+		} 
+		else 
+		{
+			anim.Play ("TeleportPlayerL");
+		}
+
 		GameObject toDestroy = Instantiate (effettoTeleport, transform);
 
 		yield return (new WaitForSeconds (seconds));
