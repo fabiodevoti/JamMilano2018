@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 	public float downJumpForce = 1f;
 	public LayerMask layerMask;
 	public GameObject effettoTeleport;
+	public GameObject lost;
+	public GameObject restartButton;
 
 	public AudioClip teleport;
 	public AudioClip death;
@@ -17,7 +19,7 @@ public class Player : MonoBehaviour
 	[HideInInspector]
 	public bool isDead = false;
     [HideInInspector]
-    public bool canMove = false;
+    public bool canMove = true;
 
     //components
     private Rigidbody2D rb;
@@ -29,10 +31,12 @@ public class Player : MonoBehaviour
 	//used for logic
 	private bool isUp = false;
 	private bool isBase = false;
+	private bool deadSound = false;
 
 	// Use this for initialization
 	void Start () 
 	{
+		deadSound = false;
 		anim = GetComponentInChildren<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 		audioSource = GetComponent<AudioSource> ();
@@ -44,22 +48,28 @@ public class Player : MonoBehaviour
 		//player dies
 		if (isDead == true) 
 		{
-			if(audioSource.isPlaying == false)
-			audioSource.PlayOneShot (death);
+			if (audioSource.isPlaying == false && deadSound == false) 
+			{
+				deadSound = true;
+				audioSource.PlayOneShot (death);
+			}
+
 
 			anim.SetBool("isDead", true);
 
+			lost.SetActive (true);
+			restartButton.SetActive (true);
             canMove = false;
 
 		}
-		if (canMove == true) HandleMovement ();
+		if (isDead == false) HandleMovement ();
 		CheckBorders ();
 	}
 
 	void Update()
 	{
 		
-		if (canMove == true) TeleportInput ();
+		if (isDead == false)  TeleportInput ();
 
 
 	}

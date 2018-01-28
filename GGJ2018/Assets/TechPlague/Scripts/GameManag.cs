@@ -7,7 +7,10 @@ public class GameManag : MonoBehaviour {
 
     public Text score;
     public int total;
-    public Text loadBar;
+	public GameObject restartButton;
+	public GameObject win;
+	public GameObject npcs;
+
     [HideInInspector]
     public int cured=0;
 
@@ -17,10 +20,15 @@ public class GameManag : MonoBehaviour {
 		
 	}
 	
-	void Update () {
+	void Update () 
+	{
 
         score.text = cured + " / " + total;
 
-
+		if (cured == total) 
+		{
+			npcs.SetActive (false);
+			win.SetActive (true);
+		}
     }
 }
