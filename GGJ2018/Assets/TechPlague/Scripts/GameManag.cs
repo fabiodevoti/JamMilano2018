@@ -23,7 +23,7 @@ public class GameManag : MonoBehaviour {
 	void Update () 
 	{
 
-        score.text = cured + " / " + total;
+        score.text = cured + "     /  " + total;
 
 		if (cured == total) 
 		{
