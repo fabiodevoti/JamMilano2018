@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1413250297194724}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.86, y: -1.6611068, z: 0.01253329}
+  m_LocalPosition: {x: -2.942069, y: -1.6611068, z: 0.01253329}
   m_LocalScale: {x: 6.3776097, y: 6.3776097, z: 6.3776097}
   m_Children: []
   m_Father: {fileID: 0}
@@ -178,8 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe8112e978325e458c13ab482232f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isInfected: 1
-  player: {fileID: 0}
+  isInfected: 0
+  player: {fileID: 1366691822567674, guid: 5052a491ed1646a4690c4a757489f43f, type: 2}
+  visibleBar: {fileID: 1710772105921410, guid: c66de69dda57e1a4292bbe44462926da, type: 2}
   isCured: 0
   reactionTime: 2
   chargeUpTime: 2.5

@@ -16,9 +16,11 @@ public class Player : MonoBehaviour
 
 	[HideInInspector]
 	public bool isDead = false;
+    [HideInInspector]
+    public bool canMove = false;
 
-	//components
-	private Rigidbody2D rb;
+    //components
+    private Rigidbody2D rb;
 	private Animator anim;
 	private AudioSource audioSource;
 
@@ -47,15 +49,17 @@ public class Player : MonoBehaviour
 
 			anim.SetBool("isDead", true);
 
+            canMove = false;
+
 		}
-		HandleMovement ();
+		if (canMove == true) HandleMovement ();
 		CheckBorders ();
 	}
 
 	void Update()
 	{
 		
-		TeleportInput ();
+		if (canMove == true) TeleportInput ();
 
 
 	}

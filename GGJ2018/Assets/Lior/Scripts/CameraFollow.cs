@@ -17,4 +17,15 @@ public class CameraFollow : MonoBehaviour
 
 		//transform.LookAt(target);
 	}
+    public void SetSpeedTransition()
+    {
+        StartCoroutine(transition());
+    }
+
+    public IEnumerator transition()
+    {
+        smoothSpeed = 0.01f;
+        yield return (new WaitForSeconds(5f));
+        smoothSpeed = 0.8f;
+    }
 }

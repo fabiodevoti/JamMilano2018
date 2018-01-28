@@ -26,16 +26,7 @@ public class NPCMovement : MonoBehaviour {
         if (state == 0) //doesn't know what to do
         {
             selected = Random.Range(0,targets.Length);
-
-           /* if (selected == targets.Length)
-            {
-                state = 2;
-                waitTimer = waitTime;
-            }
-			else 
-			{
-				state = 1;
-			}*/
+            
 			state = 1;
         }
         else if (state == 1) // is moving
