@@ -15,9 +15,11 @@ public class GameManag : MonoBehaviour {
     public int cured=0;
 
 	private AudioSource audioS;
+	private bool suonato = false;
 
-    void Start () {
-
+    void Start () 
+	{
+		suonato = false;
 		audioS = GetComponent<AudioSource> ();
 	}
 	
@@ -28,7 +30,11 @@ public class GameManag : MonoBehaviour {
 
 		if (cured == total) 
 		{
-			audioS.Play ();
+			if (audioS.isPlaying == false && suonato == false) 
+			{
+				suonato = true;
+				audioS.Play ();
+			}
 			npcs.SetActive (false);
 			restartButton.SetActive (true);
 			win.SetActive (true);

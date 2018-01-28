@@ -81,7 +81,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.355
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   player: {fileID: 0}
   visibleBar: {fileID: 0}
   isCured: 0
-  reactionTime: 2
+  reactionTime: 1
   chargeUpTime: 2.5
   chargeBar: 0
   bar: {fileID: 8300000, guid: 59d7216127689c24b88aecd73b2426f5, type: 3}
