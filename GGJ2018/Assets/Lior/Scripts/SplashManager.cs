@@ -107,6 +107,7 @@ public class SplashManager : MonoBehaviour {
 
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().clip = background;
+		GetComponent<AudioSource> ().volume = 0.6f;
         GetComponent<AudioSource>().Play();
     }
 

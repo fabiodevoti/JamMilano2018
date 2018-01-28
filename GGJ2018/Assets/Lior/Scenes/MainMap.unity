@@ -545,7 +545,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -10.566701}
+  m_Offset: {x: 0, y: -10.4692335}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -556,7 +556,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 22.133402}
+  m_Size: {x: 1, y: 22.328337}
   m_EdgeRadius: 0
 --- !u!33 &116737977
 MeshFilter:
@@ -2533,7 +2533,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5977,7 +5977,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 159
+  Priority: 192
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -8936,13 +8936,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.55
+  m_Volume: 0.234
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 118
+  Priority: 199
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
