@@ -15,6 +15,7 @@ public class SplashManager : MonoBehaviour {
     public GameObject controlsAnim2;
 	public GameObject controlsAnim3;
     public GameObject exitImage;
+	public GameObject crediti;
 
     private AudioSource audioS;
 
@@ -71,7 +72,7 @@ public class SplashManager : MonoBehaviour {
             {
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
-                    ExitGame();
+					StartCoroutine (ShowCreditsAndQuit ());
                 }
                 else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
                 {
@@ -130,4 +131,16 @@ public class SplashManager : MonoBehaviour {
     {
         Application.Quit();
     }
+
+	public IEnumerator ShowCreditsAndQuit()
+	{
+		crediti.SetActive(true);
+
+		yield return (new WaitForSeconds (5f));
+
+		crediti.SetActive(false);
+
+		Debug.Log ("rip game");
+		Application.Quit();
+	}
 }
