@@ -13,6 +13,7 @@ public class SplashManager : MonoBehaviour {
     public GameObject controlsImage;
     public GameObject controlsAnim;
     public GameObject controlsAnim2;
+	public GameObject controlsAnim3;
     public GameObject exitImage;
 
     private AudioSource audioS;
@@ -93,6 +94,7 @@ public class SplashManager : MonoBehaviour {
         exitImage.gameObject.SetActive(false);
         controlsAnim.gameObject.SetActive(false);
         controlsAnim2.gameObject.SetActive(false);
+		controlsAnim3.gameObject.SetActive(false);
 
         if (next == 1) startImage.gameObject.SetActive(true);
         if (next == 2) controlsImage.gameObject.SetActive(true);
@@ -101,6 +103,7 @@ public class SplashManager : MonoBehaviour {
         {
             controlsAnim.gameObject.SetActive(true);
             controlsAnim2.gameObject.SetActive(true);
+			controlsAnim3.gameObject.SetActive(true);
         }
 
         priority = next;
