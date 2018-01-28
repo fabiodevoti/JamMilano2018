@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SplashManager : MonoBehaviour {
     
@@ -24,15 +25,15 @@ public class SplashManager : MonoBehaviour {
 
     void Start() //Disable all the GameObject-Menu that has not to be on the screen
     {
-        SetPriority(1);
         audioS = GetComponent<AudioSource>();
+        SetPriority(1);
+        
     }
 
     void Update()
     {
         if (priority != 0)
         {
-            Debug.Log("selected " + priority);
 
             if (priority == 1)
             {
@@ -108,6 +109,7 @@ public class SplashManager : MonoBehaviour {
 
     public void StartNewGame() // Start new game function
     {
+        SceneManager.LoadScene(1);
         /*Camera.main.GetComponent<CameraFollow>().enabled = true;
         Camera.main.GetComponent<CameraFollow>().SetSpeedTransition();
         player.GetComponent<Player>().canMove = true;
@@ -123,7 +125,6 @@ public class SplashManager : MonoBehaviour {
 
     public void ExitGame() // Exit game
     {
-        Debug.Log("Sono spento basta che chiudi gli occhi");
         Application.Quit();
     }
 }
