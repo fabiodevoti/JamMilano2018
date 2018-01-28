@@ -1,15 +1,16 @@
 fileFormatVersion: 2
-guid: 05d6e3b9ec1b54841ae78be95b5a4180
-timeCreated: 1517142463
+guid: 3038af1ce4c1b6c4e94eef4c46d4f1a5
+timeCreated: 1517142373
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Sfera specchiata animato_0
-    21300002: Sfera specchiata animato_1
-    21300004: Sfera specchiata animato_2
-    21300006: Sfera specchiata animato_3
-    21300008: Sfera specchiata animato_4
-    21300010: Sfera specchiata animato_5
+    21300000: Sfera specchiata animato con luci_0
+    21300002: Sfera specchiata animato con luci_1
+    21300004: Sfera specchiata animato con luci_2
+    21300006: Sfera specchiata animato con luci_3
+    21300008: Sfera specchiata animato con luci_4
+    21300010: Sfera specchiata animato con luci_5
+    21300012: Sfera specchiata animato con luci_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -106,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sfera specchiata animato_0
+      name: Sfera specchiata animato con luci_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 21
-        width: 15
-        height: 22
+        x: 6
+        y: 8
+        width: 48
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,13 +121,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sfera specchiata animato_1
+      name: Sfera specchiata animato con luci_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 21
-        width: 15
-        height: 22
+        x: 72
+        y: 10
+        width: 52
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,13 +135,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sfera specchiata animato_2
+      name: Sfera specchiata animato con luci_2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 21
-        width: 15
-        height: 22
+        x: 136
+        y: 11
+        width: 50
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -148,13 +149,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sfera specchiata animato_3
+      name: Sfera specchiata animato con luci_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 21
-        width: 15
-        height: 22
+        x: 200
+        y: 10
+        width: 49
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,13 +163,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sfera specchiata animato_4
+      name: Sfera specchiata animato con luci_4
       rect:
         serializedVersion: 2
-        x: 280
-        y: 21
-        width: 15
-        height: 22
+        x: 264
+        y: 10
+        width: 49
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,13 +177,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Sfera specchiata animato_5
+      name: Sfera specchiata animato con luci_5
       rect:
         serializedVersion: 2
-        x: 344
-        y: 21
-        width: 15
-        height: 22
+        x: 328
+        y: 10
+        width: 48
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Sfera specchiata animato con luci_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 9
+        width: 51
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
