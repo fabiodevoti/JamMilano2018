@@ -11,12 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TechPlague/Scenes/MainMap.unity
     guid: 2b39479d82e65bf4f9f94d4ee2ce1866
-  - enabled: 1
+  - enabled: 0
     path: Assets/TechPlague/Scenes/Win.unity
     guid: b2b456e6a461bc74d91859ae68b55af4
-  - enabled: 1
+  - enabled: 0
     path: Assets/TechPlague/Scenes/Defeat.unity
     guid: cc97e50d09a39ff4da67123a6dd0b58e
-  - enabled: 1
+  - enabled: 0
     path: Assets/TechPlague/Scenes/Credits.unity
     guid: 68ec83fc153f36a48859b866752885f8
