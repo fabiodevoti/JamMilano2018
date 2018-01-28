@@ -28,6 +28,7 @@ public class GameManag : MonoBehaviour {
 		if (cured == total) 
 		{
 			npcs.SetActive (false);
+			restartButton.SetActive (true);
 			win.SetActive (true);
 		}
     }
