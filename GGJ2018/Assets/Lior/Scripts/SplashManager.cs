@@ -11,9 +11,10 @@ public class SplashManager : MonoBehaviour {
     public GameObject startImage;
     public GameObject controlsImage;
     public GameObject controlsAnim;
+    public GameObject controlsAnim2;
     public GameObject exitImage;
 
-    public AudioClip background;
+    private AudioSource audioS;
 
     private int priority;       // 1 - PLAY
                                 // 2 - CONTROLS
@@ -24,6 +25,7 @@ public class SplashManager : MonoBehaviour {
     void Start() //Disable all the GameObject-Menu that has not to be on the screen
     {
         SetPriority(1);
+        audioS = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -34,9 +36,10 @@ public class SplashManager : MonoBehaviour {
 
             if (priority == 1)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     SetPriority(0); // as a form of hiding everything
+           
 
                     //TODO roba
                     StartNewGame();
@@ -49,7 +52,7 @@ public class SplashManager : MonoBehaviour {
             }
             else if (priority == 2)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     SetPriority(4);
                 }
@@ -64,7 +67,7 @@ public class SplashManager : MonoBehaviour {
             }
             else if (priority == 3)
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
                 {
                     ExitGame();
                 }
@@ -83,15 +86,21 @@ public class SplashManager : MonoBehaviour {
 
     public void SetPriority(int next)
     {
+        audioS.Play();
         startImage.gameObject.SetActive(false);
         controlsImage.gameObject.SetActive(false);
         exitImage.gameObject.SetActive(false);
         controlsAnim.gameObject.SetActive(false);
+        controlsAnim2.gameObject.SetActive(false);
 
         if (next == 1) startImage.gameObject.SetActive(true);
         if (next == 2) controlsImage.gameObject.SetActive(true);
         if (next == 3) exitImage.gameObject.SetActive(true);
-        if (next == 4) controlsAnim.gameObject.SetActive(true);
+        if (next == 4)
+        {
+            controlsAnim.gameObject.SetActive(true);
+            controlsAnim2.gameObject.SetActive(true);
+        }
 
         priority = next;
 
@@ -99,7 +108,7 @@ public class SplashManager : MonoBehaviour {
 
     public void StartNewGame() // Start new game function
     {
-        Camera.main.GetComponent<CameraFollow>().enabled = true;
+        /*Camera.main.GetComponent<CameraFollow>().enabled = true;
         Camera.main.GetComponent<CameraFollow>().SetSpeedTransition();
         player.GetComponent<Player>().canMove = true;
         
@@ -108,6 +117,8 @@ public class SplashManager : MonoBehaviour {
         GetComponent<AudioSource>().Stop();
         GetComponent<AudioSource>().clip = background;
         GetComponent<AudioSource>().Play();
+
+    */
     }
 
     public void ExitGame() // Exit game
